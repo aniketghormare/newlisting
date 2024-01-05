@@ -1,0 +1,71 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add react-tagsinput
+
+PATH: 
+  C:\Program Files\Python311\Scripts;C:\Program Files\Python311;C:\mysql-8.1.0-winx64\mysql-8.1.0-winx64\bin;node_modules\npm\bin;C:\Program Files\Git\bin;C:\xampp\mysql\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\PC\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\PC\AppData\Roaming\nvm;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Program Files\Python311\Scripts;C:\Program Files\Python311;C:\mysql-8.1.0-winx64\mysql-8.1.0-winx64\bin;node_modules\npm\bin;C:\Program Files\Git\bin;C:\xampp\mysql\bin;C:\Users\PC\AppData\Roaming\npm;C:\Users\PC\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.14.15.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\PC\AppData\Roaming\nvm\v16.16.0\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:641:28)
+      at ClientRequest.emit (node:events:527:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:771:9)
+      at Object.onceWrapper (node:events:641:28)
+      at TLSSocket.emit (node:events:539:35)
+      at TLSSocket.Socket._onTimeout (node:net:516:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "listing",
+    "version": "0.1.2",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "export": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.11.0",
+      "@emotion/styled": "^11.11.0",
+      "@mui/icons-material": "^5.11.16",
+      "@mui/material": "^5.13.0",
+      "@mui/system": "^5.12.3",
+      "@mui/x-data-grid": "^6.4.0",
+      "autoprefixer": "10.4.14",
+      "eslint": "8.40.0",
+      "eslint-config-next": "13.4.2",
+      "next": "13.4.2",
+      "next-auth": "^4.22.1",
+      "next-themes": "^0.2.1",
+      "postcss": "8.4.23",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-responsive-carousel": "^3.2.23",
+      "reactstrap": "^9.1.10",
+      "sharp": "^0.32.1",
+      "tailwindcss": "3.3.2"
+    },
+    "devDependencies": {
+      "@tailwindcss/aspect-ratio": "^0.4.2",
+      "@tailwindcss/forms": "^0.5.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
