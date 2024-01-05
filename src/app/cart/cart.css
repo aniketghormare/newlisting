@@ -1,0 +1,77 @@
+#mainContainer {
+  background-color: white;
+  padding: 15px;
+  background-color: #F5F9FF;
+
+}
+.disabled-icon {
+  opacity: 0.5; /* Reduce opacity to indicate it's disabled */
+}
+.justify-between{
+  height:60px;
+  align-items: center;
+  font-size: 30px;
+}
+@media (max-width: 700px) {
+  .justify-between{
+    font-size: 20px;
+  }
+  #mainContainer {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+  }
+}
+.productIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 3px;
+}
+.couponCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  border-radius: 4px;
+  margin: auto;
+  border: 1px solid darkgray;
+  height: 50px;
+}
+.couponCard:hover{
+  border: 1px solid black;
+}
+.cartSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 95%;
+
+  margin: auto;
+}
+.pricerow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+.buttonPay {
+  height: 60px;
+  background-color: #4285F4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+.buttonPay:hover{
+  background-color: #2667cf;
+  font-weight: 800;
+}
+.underline{
+  text-decoration: underline;
+  text-decoration-color: black;
+  color:"#4285F4"
+}

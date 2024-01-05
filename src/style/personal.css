@@ -1,0 +1,106 @@
+ label {
+
+     font-weight: 600;
+
+ }
+
+ hr {
+     border-top: 2px solid #4285F4;
+ }
+
+ select {
+     border: 1px solid #4285F4;
+ }
+
+ form label {
+     margin-top: 10px
+ }
+
+ .button {
+     width: 100%;
+     height: 50px;
+     border: 1px solid var(--greyscale-200, #EEE);
+     border-radius: 8px;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+ }
+
+ .button * {
+     margin-left: 20px
+ }
+
+ .logoutbox {
+     border-radius: 36px 36px 0px 0px;
+     border: 1px solid var(--greyscale-200, #EEE);
+     background: var(--others-white, #FFF);
+     position: absolute;
+     bottom: 0;
+     display: flex;
+     flex-direction: column;
+
+
+ }
+
+ .logoutred {
+     color: var(--alerts-status-error, #F75555);
+     text-align: center;
+
+     /* H4/bold */
+     font-family: Urbanist;
+     font-size: 24px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 160%;
+     /* 38.4px */
+ }
+
+ .logoutblack {
+     color: var(--greyscale-800, #424242);
+     text-align: center;
+
+     /* H5/bold */
+     font-family: Urbanist;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 160%;
+     /* 32px */
+ }
+
+ .logoutyes {
+     border-radius: 100px;
+     background: var(--d-9-d-9-d-9, #4285F4);
+
+
+     box-shadow: 4px 8px 24px 0px rgba(1, 183, 99, 0.25);
+ }
+
+ .logoutcancel {
+     color: var(--d-9-d-9-d-9, #4285F4);
+     text-align: center;
+
+     /* Button/Shadow 1 */
+     text-shadow: 4px 8px 24px rgba(1, 183, 99, 0.25);
+
+     /* body/large/bold */
+     font-family: Urbanist;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 160%;
+     /* 25.6px */
+     letter-spacing: 0.2px;
+ }
+
+ .namelogo {
+     color: var(--greyscale-900, #212121);
+     text-align: center;
+
+     /* H4/bold */
+     font-family: Urbanist;
+     font-size: 24px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 160%;
+     /* 38.4px */
+ }

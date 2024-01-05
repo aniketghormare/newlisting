@@ -1,0 +1,201 @@
+#paper {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 700px) {
+  #mainContainer {
+    width: 95%;
+    margin: auto;
+  }
+}
+#maingrid {
+  width: 27vmin;
+  margin: auto;
+  height: 27vmin;
+  background-color: #012a4a;
+  border-radius: 13px;
+  cursor: pointer;
+}
+#bannersection {
+  padding: 3px;
+}
+.banner {
+  border-radius: 7px;
+  width: 95vw;
+  margin: auto;
+  max-height: 200px;
+}
+
+@media (min-width: 900px) {
+  #maingrid {
+    width: 27vmin;
+    margin: auto;
+    height: 27vmin;
+    background-color: #012a4a;
+    border-radius: 13px;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  #bannersection {
+    padding: 16px;
+  }
+  #mainservice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #card {
+    margin-left: 8px;
+    width: 150px;
+    height: 170px;
+
+    border-radius: 11px;
+  }
+}
+#buytrending {
+  display: flex;
+
+  margin: auto;
+  overflow: auto;
+}
+#jobsection {
+  display: flex;
+
+  min-height: 168px;
+  margin: auto;
+  overflow: auto;
+}
+#trendingtender {
+  display: flex;
+
+  min-height: 278px;
+  margin: auto;
+  overflow: auto;
+}
+
+#card {
+  margin-left: 8px;
+  width: 104px;
+  height: 128px;
+  border: 2px solid #ccc;
+  border-radius: 11px;
+  position: relative;
+}
+#cardfoot {
+  color: white;
+  display: flexbox;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #012a4a;
+  border-radius: 0px 0px 10px 10px;
+}
+#cardtitle {
+  padding: 5px;
+}
+#buytrendingimg {
+  width: 80%;
+  padding: 11px;
+  margin: auto;
+  border-radius: 14px;
+}
+#jobcard {
+  margin-left: 8px;
+  width: auto;
+  height: auto;
+  min-width: 183px;
+  min-height: 157px;
+  border-radius: 11px;
+  position: relative;
+  border: 2px solid #5370a7;
+}
+
+#jobcardfoot {
+  color: white;
+  max-height: 31px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background-color: #012a4a;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#jobcardtitle {
+  padding: 4px;
+}
+
+#auctioncard {
+  margin-left: 8px;
+  width: auto;
+  height: auto;
+  min-width: 140px;
+  min-height: 120px;
+  border-radius: 11px;
+  position: relative;
+  padding: 8px;
+  background-color: #e6e8ef;
+}
+
+#auctioncardfoot {
+  display: flexbox;
+  text-align: center;
+  position: absolute;
+  background-color: #012a4a;
+  color: white;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#auctioncardtitle {
+  padding: 1px;
+}
+
+#tendercard {
+  margin-left: 8px;
+  /* width: 196px;
+    height: 169px; */
+  width: auto;
+  height: auto;
+  min-width: 200px;
+  max-height: 282px;
+  border: 2px solid cadetblue;
+  padding: 9px;
+  border-radius: 11px;
+}
+#tenderimage {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+#tendercardtitle {
+  background-color: white;
+}
+
+.gridtitle {
+  display: block;
+  text-align: center;
+  position: relative;
+  bottom: 24px;
+  background: azure;
+}
+
+.mainicon {
+  max-width: 72%;
+  margin: auto;
+}
+
+.categories {
+  margin: auto;
+}
+.construction {
+  width: 100%;
+  height: fit-content;
+  max-height: 250px;
+}

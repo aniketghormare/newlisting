@@ -1,0 +1,38 @@
+#maincategory {
+    background-color: #F5F9FF;
+    position: relative;
+    top: 60px;
+    padding: 10px;
+}
+
+@media (min-width: 900px) {
+    #maincategory {
+        background-color: #F5F9FF;
+        position: relative;
+        top: 60px;
+        width: 83%;
+        margin: auto;
+    }
+}
+
+.banner {
+    width: 98vw;
+
+    margin: auto;
+}
+
+.singlegrid {
+    background-color: #216874;
+    border-radius: 5px;
+    border: 1.5px solid ghostwhite;
+    color: #eeebeb;
+    width: 50%;
+    height: auto;
+
+}
+
+.gridimage {
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+}

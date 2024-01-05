@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#mainContainer {
+    position: relative;
+    /* top: 60px; */
+    width: 100vw
+        /* height: auto; */
+        /* background-color: #F5F9FF; */
+}
+
+#topbar {
+    position: fixed;
+    z-index: 99;
+    width: 100vw
+}
+
+@media (min-width: 900px) {
+    body {
+        font-family: sans-serif;
+    }
+
+    #mainContainer {
+
+        width: 83%;
+        margin: auto;
+        position: relative;
+        top: 8px;
+    }
+
+    .banner {
+        height: 260px;
+        width: 95vw;
+    }
+}

@@ -1,0 +1,36 @@
+.banner {
+  width: 98vw;
+   
+  margin: auto;
+  
+}
+#mainContainer{
+  background-color: #F5F9FF;
+  
+}
+.togglebutton {
+  max-height: 25px;
+  margin-bottom: 11px;
+  margin-left: 16px;
+}
+#productcard {
+  margin-left: 8px;
+  width: auto;
+  height: auto;
+  position: relative;
+  border: 2px solid cadetblue;
+  padding: 7px;
+  border-radius: 11px;
+  background-color: #FFFFFF;
+}
+
+#productimage {
+  width: 100%;
+
+  margin: auto;
+  border-radius: 5px;
+}
+
+#productcardtitle {
+  color: black;
+}

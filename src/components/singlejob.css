@@ -1,0 +1,263 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.statuscard {
+    background-color: #DEF1FF;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    color: #4285F4;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .statuscard:hover{
+    background-color:#4285F4;
+    color:white
+  }
+.bigimgdiv {
+    height: auto;
+    width: 100%;
+    border: 1px solid white;
+    margin-top:65px
+}
+.descbox{
+    width: 94%;
+    height: auto;
+    border: 1px solid white;
+    margin: auto; 
+    padding:2px
+}
+
+.containerdiv {
+    width: 92%;
+    height: auto;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 20px;
+    margin:auto
+}
+
+.text {
+    color: #012A4A;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.listdiv {
+    height: auto;
+    width: 96%;
+    border: 1px solid white;
+    margin:auto;
+   
+   
+}
+
+.banner {
+    width: 98vw;
+    margin: auto;
+}
+
+.card {
+    height: 200px;
+    width: 96%;
+   
+
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+   
+    border: 3px solid blue;
+}
+
+.card:hover{
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.cardupper {
+    height: 70%;
+    border: 1px solid white;
+    margin: auto;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+   
+    padding: 10px;
+    align-items: center;
+}
+
+.cardlower {
+    height: 30%;
+    border: 1px solid white;
+    margin: auto;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+.upper1 {
+    width: 100%;
+    border: 1px solid white;
+    height: 100%;
+    border-radius: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.upper2 {
+    width: 100%;
+    border: 1px solid white;
+    height: 100%;
+    border-radius: 0px 10px 0px 0px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.upper2 *{
+    margin-top:4px
+}
+
+.typo {
+    color: #000;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* style={{width:"30%",height:"100%",alignItems:"center"}} */
+.blue1 {
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    font-size: 16px;
+    padding: 1px;
+    color: var(--4285-f-4, #4285F4);
+}
+
+.blue2 {
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    font-size: 16px;
+    padding: 1px;
+    border-color:white;
+    color: var(--4285-f-4, #4285F4);
+}
+
+.typocompany {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.desctext {
+    color: #000;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.pricetypo {
+    color: #4285F4;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.placetypo {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.emptypo {
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.remotediv {
+    height: 18px;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+ @media (max-width: 700px) {
+    .text{
+        font-size: 24px;
+    }
+    .card{
+        height:185px;
+    }
+    .blue1 {
+        width: 25%;
+        font-size: 12px;
+
+    }
+
+    .blue2 {
+        width: 75%;
+        font-size: 12px;
+
+    }
+
+    .cardupper {
+        padding: 3px;
+    }
+
+    .cardlower {
+        padding: 3px;
+    }
+    .typo{
+        font-size:20px;
+    }
+    .pricetypo{
+        font-size: 15px;
+    }
+    .typocompany {
+        font-size: 16px;
+    }
+    .desctext {
+        font-size: 18px;
+    }
+    .placetypo {
+        font-size: 13px;
+    }
+    .emptypo {
+        font-size: 13px;
+    }
+    .remotediv {
+        font-size: 14px; 
+    }
+    .bigimgdiv{
+        margin-top:65px
+    }
+    .statuscard{
+        font-size: 12px;
+      }
+} 
