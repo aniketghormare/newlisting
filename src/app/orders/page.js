@@ -78,8 +78,12 @@ function Page() {
           {orderStatus &&
             orderStatus.map((item, index) => (
               <Grid item xs={3} md={3} sm={3} lg={2} xl={2} key={index}>
+               
                 <div
-                  className="statuscard"
+                className={`statuscard ${
+                  item.name === selectedStatus ? "selected" : ""
+                }`}
+                // className={`statuscard`}
                   style={{ alignItems: "center", cursor: "pointer" }}
                   onClick={() => handleStatusCardClick(item.name)}
                 >

@@ -21,6 +21,10 @@
 .detailsbtn{
   color: #20B288;
 }
+.statuscard.selected {
+  background-color: #4285F4; /* Set your desired background color */
+  color: white; /* Set the text color for better visibility */
+}
 @media (max-width: 700px) {
   #mainContainer {
     width: 95%;
