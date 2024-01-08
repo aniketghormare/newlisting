@@ -52,7 +52,7 @@ const Myorder = () => {
                   <Typography variant="subtitle2">
                     <span style={{ color: "#A9A9A9" }}>Order Id:</span>{" "}
                     <span style={{ color: "#4D4D4D", fontWeight: "600" }}>
-                      {item.orderId}
+                      {item.orderId.substring(0,11)+"..."}
                       {/* #000023 */}
                     </span>
                   </Typography>
@@ -68,7 +68,7 @@ const Myorder = () => {
                   <Typography variant="subtitle2">
                     <span style={{ color: "#4D4D4D", fontWeight: "600" }}>
                       Product:
-                      {item.title}
+                      {item.title.substring(0,11)+"..."}
                       {/* Material one */}
                     </span>
                   </Typography>

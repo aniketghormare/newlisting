@@ -130,7 +130,7 @@ function renderGridItems(status, alldata, allbuy, allrent) {
             <Typography variant="subtitle2">
               <span style={{ color: "#A9A9A9" }}>Order Id:</span>{" "}
               <span style={{ color: "#4D4D4D", fontWeight: "600" }}>
-                {item.orderId}
+                {item.orderId.substring(0,40)+"..."}
                 {/* #000023 */}
               </span>
             </Typography>
@@ -145,7 +145,7 @@ function renderGridItems(status, alldata, allbuy, allrent) {
           <div className="ordercardsection">
             <Typography variant="subtitle2">
               <span style={{ color: "#4D4D4D", fontWeight: "600" }}>
-                Product: {item.title}
+                Product: {item.title.substring(0,30)+"..."}
                 {/* Material one */}
               </span>
             </Typography>
