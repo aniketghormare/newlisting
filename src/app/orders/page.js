@@ -4,6 +4,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import "./orders.css";
 import Link from "next/link";
 import baseurl from "@/components/base.js";
+import InputLabel from "@mui/material/InputLabel";
 function Page() {
   const [showGrid, setShowGrid] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState("All"); // Default status
@@ -122,6 +123,7 @@ function renderGridItems(status, alldata, allbuy, allrent) {
       <Grid item xs={12} md={6} sm={6} lg={4} xl={3} key={index}>
         {/* Render the Grid items based on the selected status */}
         {/* You can customize the content here */}
+
         <div className="ordercard">
           {/* ... Your content ... */}
           <div className="ordercardsection">

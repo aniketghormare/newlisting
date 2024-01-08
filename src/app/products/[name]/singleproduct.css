@@ -4,13 +4,17 @@
     border: 1px solid #F5F9FF;
     margin: auto;
     background-color: #F5F9FF;
+    /* border-color:red */
+  
+
 }
 
 .upperimgdiv {
     margin-top: 30px;
-    height: auto;
+    height: 180px !important;
     width: 100%;
     border: 1px solid #F5F9FF;
+    /* border-color:red */
 
 }
 
@@ -28,13 +32,23 @@
 }
 
 .bannerdiv {
-    height: auto;
+    height: 230px !important;
     width: 100%;
     border: 1px solid #F5F9FF;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 30px;
+    margin-top: 20px;
+    
+}
+.upperbigimg{
+    height:100%;
+    width:100%;
+    border:1px solid #F5F9FF;
+    /* object-fit:cover */
+}
+.upperbigimg:hover{
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
 }
 
 .imgconteiner {
@@ -43,15 +57,19 @@
     border: 1px solid #F5F9FF;
     margin: auto;
     margin-top: 30px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
 }
 
-.imgconteiner {
+/* .imgconteiner {
     display: flex;
 
     justify-content: space-between;
     align-items: center;
 
-}
+} */
 
 .imgdiv {
     height: 100%;
@@ -272,7 +290,7 @@
     background-color: white;
 }
 
-/* style={{width:"100%",height:"100px",border:"1px solid #2F6FED",backgroundColor:"#5D8DEB",color:"white",borderShadow:"0px 0px 14px -3px #2F6FED",borderRadius:"12px",display:"flex"}} */
+
 @media (max-width: 1000px) and (min-width:501px) {
     .gridbox {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -299,7 +317,7 @@
     }
 
     .btncontent {
-        font-size: 16px;
+        font-size: 25px;
     }
 
 
@@ -343,7 +361,7 @@
     }
 
     .btncontent {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .bigbutton {

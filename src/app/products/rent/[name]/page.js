@@ -5,8 +5,8 @@ import "./singleproduct.css";
 import { useRouter } from "next/navigation";
 import { IconButton, Typography } from "@mui/material";
 import { Rating, Grid } from "@mui/material";
-import baseurl from "@/components/base.js"
-const page = ({params}) => {
+import baseurl from "@/components/base.js";
+const page = ({ params }) => {
   //const params = useParams();
   const [getid, setgetid] = useState(null);
   const [banners, setBanners] = useState([]);
@@ -15,9 +15,9 @@ const page = ({params}) => {
   const [manushow, setmanushow] = useState(false);
   const [customshow, setcustomshow] = useState(false);
   const [shippingshow, setshippingshow] = useState(false);
-  const [singledata,setsingledata]=useState({})
+  const [singledata, setsingledata] = useState({});
   // // Simulated data for banner images
-   const router = useRouter(); // Initialize the router
+  const router = useRouter(); // Initialize the router
   // const { name } = router.query; // Access route parameter 'name'
 
   const bannerData = [
@@ -49,7 +49,7 @@ const page = ({params}) => {
       })
       .then((data) => {
         console.log(data);
-        setsingledata(data)
+        setsingledata(data);
       })
       .catch((err) => {
         console.log(err);
@@ -61,7 +61,6 @@ const page = ({params}) => {
     // In this example, we'll simply set the banner data
     setBanners(bannerData);
     setgetid(+params.name);
-   
   }, []);
   useEffect(() => {
     getdata();
@@ -89,7 +88,6 @@ const page = ({params}) => {
   if (currentBannerIndex == bannerData.length - 2) {
     setCurrentBannerIndex(1);
   }
- 
 
   //console.log(singledata);
 
@@ -99,9 +97,7 @@ const page = ({params}) => {
       <div className="upperimgdiv">
         <img
           className="upperbigimg"
-          height="100%"
-          width="100%"
-          className="w-screen h-40 rounded-md banner"
+          // className="w-screen h-40 rounded-md banner"
           src="/bottleimg.png"
           alt="img"
         />
@@ -115,21 +111,21 @@ const page = ({params}) => {
       <div className="bannerdiv">
         <IconButton className="pre">
           <img
-            className="w-screen h-auto rounded-md banner"
+           // className="w-screen h-auto rounded-md banner"
             src={preBanner.imageUrl}
             alt={`Banner ${preBanner.id}`}
           />
         </IconButton>
         <IconButton>
           <img
-            className="w-screen h-auto rounded-md banner"
+           // className="w-screen h-auto rounded-md banner"
             src={currentBanner.imageUrl}
             alt={`Banner ${currentBanner.id}`}
           />
         </IconButton>
         <IconButton className="nxt">
           <img
-            className="w-screen h-auto rounded-md banner"
+           // className="w-screen h-auto rounded-md banner"
             src={nxtBanner.imageUrl}
             alt={`Banner ${nxtBanner.id}`}
           />
@@ -208,7 +204,7 @@ const page = ({params}) => {
           </div>
           <div className="spcificationcontent">
             <div>
-            <p>Stock: {singledata.stock}</p>
+              <p>Stock: {singledata.stock}</p>
               {/* <p>64MP (OIS) + 8MP + 2MP | 16MP Front Camera</p> */}
             </div>
           </div>
@@ -221,7 +217,7 @@ const page = ({params}) => {
           </div>
           <div className="spcificationcontent">
             <div>
-            <p>Rating: {singledata.rating}</p>
+              <p>Rating: {singledata.rating}</p>
               {/* <p>5000 mAh Battery</p> */}
             </div>
           </div>
@@ -234,7 +230,7 @@ const page = ({params}) => {
           </div>
           <div className="spcificationcontent">
             <div>
-            <p>MOQ: {singledata.moq}</p>
+              <p>MOQ: {singledata.moq}</p>
               {/* <p>Qualcomm Snapdragon 7+ Gen 2 (4nm) Processor</p> */}
             </div>
           </div>
@@ -272,7 +268,7 @@ const page = ({params}) => {
             </div>
             <div className="btnimg" style={{ borderColor: "#0061A7" }}>
               <img
-                src="/vectorwhite.png"
+                src="/Vectorwhite.png"
                 onClick={() => setdescshow(!descshow)}
               />
             </div>
@@ -301,7 +297,7 @@ const page = ({params}) => {
             </div>
             <div className="btnimg" style={{ borderColor: "#0061A7" }}>
               <img
-                src="/vectorwhite.png"
+                src="/Vectorwhite.png"
                 onClick={() => setmanushow(!manushow)}
               />
             </div>
@@ -330,7 +326,7 @@ const page = ({params}) => {
             </div>
             <div className="btnimg" style={{ borderColor: "#0061A7" }}>
               <img
-                src="/vectorwhite.png"
+                src="/Vectorwhite.png"
                 onClick={() => setcustomshow(!customshow)}
               />
             </div>
@@ -359,7 +355,7 @@ const page = ({params}) => {
             </div>
             <div className="btnimg" style={{ borderColor: "#0061A7" }}>
               <img
-                src="/vectorwhite.png"
+                src="/Vectorwhite.png"
                 onClick={() => setshippingshow(!shippingshow)}
               />
             </div>
@@ -394,11 +390,11 @@ const page = ({params}) => {
               style={{
                 borderColor: "rgb(14,68,109)",
                 width: "50%",
-                fontSize: "25px",
+                //fontSize: "25px",
                 justifyContent: "center",
               }}
             >
-             ₹ {singledata.price}
+              ₹ {singledata.price}
               {/* ₹ 50,00,000 */}
             </div>
             <div
@@ -408,14 +404,13 @@ const page = ({params}) => {
               <button
                 className="btncontent"
                 style={{
-                 borderColor: "rgb(14,68,109)",
-                  fontSize: "25px",
+                  borderColor: "rgb(14,68,109)",
+                 // fontSize: "25px",
                   justifyContent: "center",
                   // borderColor: "red",
                   // backgroundColor:"red"
                 }}
-                onClick={() =>router.push(`/cart`) }
-                
+                onClick={() => router.push(`/cart`)}
               >
                 Rent Now
               </button>

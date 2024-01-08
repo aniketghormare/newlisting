@@ -5,10 +5,12 @@ import { usePathname, useSearchParams } from "next/navigation";
 //import { useRouter } from 'next/router'
 // import { useRouter } from 'next/router';
 // import { useParams } from 'next/router';
+//import styled from "styled-components";
 import { useRouter } from "next/navigation";
 import { IconButton, Typography } from "@mui/material";
 import { Rating, Grid } from "@mui/material";
 import baseurl from "@/components/base.js";
+import Image from "next/image";
 const page = ({ params }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -96,12 +98,13 @@ const page = ({ params }) => {
       <div className="upperimgdiv">
         <img
           className="upperbigimg"
-          height="100%"
-          width="100%"
-          className="w-screen h-40 rounded-md banner"
+         
+          //  object-fit={"cover"}
+          // className="w-screen h-40 rounded-md banner"
           src="/bottleimg.png"
           alt="img"
         />
+        {/* <img src={"/bottleimg.png"}/> */}
       </div>
       <div className="boldertext">
         <p className="text">{singledata.title}</p>
@@ -109,21 +112,21 @@ const page = ({ params }) => {
       <div className="bannerdiv">
         <IconButton className="pre">
           <img
-            className="w-screen h-auto rounded-md banner"
+            //className="w-screen h-auto rounded-md banner"
             src={preBanner.imageUrl}
             alt={`Banner ${preBanner.id}`}
           />
         </IconButton>
         <IconButton>
           <img
-            className="w-screen h-auto rounded-md banner"
+           // className="w-screen h-auto rounded-md banner"
             src={currentBanner.imageUrl}
             alt={`Banner ${currentBanner.id}`}
           />
         </IconButton>
         <IconButton className="nxt">
           <img
-            className="w-screen h-auto rounded-md banner"
+           // className="w-screen h-auto rounded-md banner"
             src={nxtBanner.imageUrl}
             alt={`Banner ${nxtBanner.id}`}
           />
@@ -378,7 +381,7 @@ const page = ({ params }) => {
               style={{
                 borderColor: "rgb(14,68,109)",
                 width: "50%",
-                fontSize: "20px",
+                //fontSize: "20px",
                 justifyContent: "center",
               }}
             >
@@ -392,7 +395,7 @@ const page = ({ params }) => {
                 className="btncontent"
                 style={{
                   borderColor: "rgb(14,68,109)",
-                  fontSize: "20px",
+                 // fontSize: "20px",
                   justifyContent: "center",
                 }}
                 onClick={() => router.push(`/cart`)}

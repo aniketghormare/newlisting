@@ -37,13 +37,14 @@ function page() {
       {show == true && (
         <div id="mainContainer">
           <br />
-          <Image
+          <img  src="/bottleimg.png"  width="100%"/>
+          {/* <Image
             className="banner"
             src="https://ibb.co/DYgF15r"
             alt="My Image"
             width={400}
             height={400}
-          />
+          /> */}
           <br />
           <Typography variant="h6">
             Sokia total station model ml12323 China made, pearl yellow

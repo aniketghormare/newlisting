@@ -8,15 +8,17 @@
 
 .upperimgdiv {
     margin-top: 30px;
-    height: auto;
+    height: 180px !important;
     width: 100%;
     border: 1px solid #F5F9FF;
+    /* border-color:red */
 
 }
 
 .upperimgdiv:hover {
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
 }
+
 
 .boldertext {
     width: 90%;
@@ -28,13 +30,25 @@
 }
 
 .bannerdiv {
-    height: auto;
+    height:230px;
     width: 100%;
     border: 1px solid #F5F9FF;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 30px;
+    margin-top: 20px;
+    /* border-color:red; */
+    /* object-fit:cover */
+   
+}
+.upperbigimg{
+    height:100%;
+    width:100%;
+    border:1px solid #F5F9FF;
+    /* object-fit:cover */
+}
+.upperbigimg:hover{
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
 }
 
 .imgconteiner {
@@ -341,7 +355,7 @@
     }
 
     .btncontent {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .bigbutton {
