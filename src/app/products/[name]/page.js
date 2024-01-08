@@ -98,7 +98,6 @@ const page = ({ params }) => {
       <div className="upperimgdiv">
         <img
           className="upperbigimg"
-         
           //  object-fit={"cover"}
           // className="w-screen h-40 rounded-md banner"
           src="/bottleimg.png"
@@ -119,14 +118,14 @@ const page = ({ params }) => {
         </IconButton>
         <IconButton>
           <img
-           // className="w-screen h-auto rounded-md banner"
+            // className="w-screen h-auto rounded-md banner"
             src={currentBanner.imageUrl}
             alt={`Banner ${currentBanner.id}`}
           />
         </IconButton>
         <IconButton className="nxt">
           <img
-           // className="w-screen h-auto rounded-md banner"
+            // className="w-screen h-auto rounded-md banner"
             src={nxtBanner.imageUrl}
             alt={`Banner ${nxtBanner.id}`}
           />
@@ -395,7 +394,7 @@ const page = ({ params }) => {
                 className="btncontent"
                 style={{
                   borderColor: "rgb(14,68,109)",
-                 // fontSize: "20px",
+                  // fontSize: "20px",
                   justifyContent: "center",
                 }}
                 onClick={() => router.push(`/cart`)}
