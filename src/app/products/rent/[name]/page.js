@@ -1,13 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-//import "./singleproduct.css";
+import "./singleproduct.css";
 //import { useRouter } from 'next/navigate';
 import { useRouter } from "next/navigation";
 import { IconButton, Typography } from "@mui/material";
 import { Rating, Grid } from "@mui/material";
-import baseurl from "@/components/base.js";
-import styled from "styled-components";
-const page = ({ params }) => {
+import baseurl from "@/components/base.js"
+const page = ({params}) => {
   //const params = useParams();
   const [getid, setgetid] = useState(null);
   const [banners, setBanners] = useState([]);
@@ -16,9 +15,9 @@ const page = ({ params }) => {
   const [manushow, setmanushow] = useState(false);
   const [customshow, setcustomshow] = useState(false);
   const [shippingshow, setshippingshow] = useState(false);
-  const [singledata, setsingledata] = useState({});
+  const [singledata,setsingledata]=useState({})
   // // Simulated data for banner images
-  const router = useRouter(); // Initialize the router
+   const router = useRouter(); // Initialize the router
   // const { name } = router.query; // Access route parameter 'name'
 
   const bannerData = [
@@ -50,7 +49,7 @@ const page = ({ params }) => {
       })
       .then((data) => {
         console.log(data);
-        setsingledata(data);
+        setsingledata(data)
       })
       .catch((err) => {
         console.log(err);
@@ -62,6 +61,7 @@ const page = ({ params }) => {
     // In this example, we'll simply set the banner data
     setBanners(bannerData);
     setgetid(+params.name);
+   
   }, []);
   useEffect(() => {
     getdata();
@@ -89,11 +89,12 @@ const page = ({ params }) => {
   if (currentBannerIndex == bannerData.length - 2) {
     setCurrentBannerIndex(1);
   }
+ 
 
   //console.log(singledata);
 
   return (
-    <DIV id="mainContainer" className="container">
+    <div id="mainContainer" className="container">
       <br /> <br />
       <div className="upperimgdiv">
         <img
@@ -207,7 +208,7 @@ const page = ({ params }) => {
           </div>
           <div className="spcificationcontent">
             <div>
-              <p>Stock: {singledata.stock}</p>
+            <p>Stock: {singledata.stock}</p>
               {/* <p>64MP (OIS) + 8MP + 2MP | 16MP Front Camera</p> */}
             </div>
           </div>
@@ -220,7 +221,7 @@ const page = ({ params }) => {
           </div>
           <div className="spcificationcontent">
             <div>
-              <p>Rating: {singledata.rating}</p>
+            <p>Rating: {singledata.rating}</p>
               {/* <p>5000 mAh Battery</p> */}
             </div>
           </div>
@@ -233,7 +234,7 @@ const page = ({ params }) => {
           </div>
           <div className="spcificationcontent">
             <div>
-              <p>MOQ: {singledata.moq}</p>
+            <p>MOQ: {singledata.moq}</p>
               {/* <p>Qualcomm Snapdragon 7+ Gen 2 (4nm) Processor</p> */}
             </div>
           </div>
@@ -393,11 +394,11 @@ const page = ({ params }) => {
               style={{
                 borderColor: "rgb(14,68,109)",
                 width: "50%",
-                // fontSize: "25px",
+                fontSize: "25px",
                 justifyContent: "center",
               }}
             >
-              ₹ {singledata.price}
+             ₹ {singledata.price}
               {/* ₹ 50,00,000 */}
             </div>
             <div
@@ -407,13 +408,14 @@ const page = ({ params }) => {
               <button
                 className="btncontent"
                 style={{
-                  borderColor: "rgb(14,68,109)",
-                  // fontSize: "25px",
+                 borderColor: "rgb(14,68,109)",
+                  fontSize: "25px",
                   justifyContent: "center",
                   // borderColor: "red",
                   // backgroundColor:"red"
                 }}
-                onClick={() => router.push(`/cart`)}
+                onClick={() =>router.push(`/cart`) }
+                
               >
                 Rent Now
               </button>
@@ -421,342 +423,8 @@ const page = ({ params }) => {
           </button>
         </div>
       </div>
-    </DIV>
+    </div>
   );
 };
 
 export default page;
-
-const DIV = styled.div`
-  .container {
-    height: auto;
-    width: 100%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    background-color: #f5f9ff;
-  }
-
-  .upperimgdiv {
-    margin-top: 30px;
-    height: auto;
-    width: 100%;
-    border: 1px solid #f5f9ff;
-  }
-
-  .upperimgdiv:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-  }
-
-  .boldertext {
-    width: 90%;
-    height: auto;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .bannerdiv {
-    height: auto;
-    width: 100%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 30px;
-  }
-
-  .imgconteiner {
-    height: auto;
-    width: 80%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    margin-top: 30px;
-  }
-
-  .imgconteiner {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .imgdiv {
-    height: 100%;
-    width: 100px;
-    border: 1px solid #f5f9ff;
-    border-radius: 16px;
-    /* margin-left: 20px; */
-  }
-
-  .imgdiv:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
-  }
-
-  .rating {
-    height: auto;
-    width: 80%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    margin-top: 30px;
-  }
-
-  .gridbox {
-    height: auto;
-    width: 90%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-  }
-
-  .card {
-    height: 90px;
-    width: 250px;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    background-color: white;
-    border-radius: 12px;
-    display: flex;
-  }
-
-  .card:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
-    font-weight: 900;
-  }
-
-  .imggridbox {
-    height: 100%;
-    width: 40%;
-    border: 1px solid #f5f9ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contentdiv {
-    height: 100%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .text {
-    /* class="text-3xl font-bold text-black-600 text-justify" */
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .highdiv {
-    height: auto;
-    width: 80%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    margin-top: 30px;
-  }
-
-  .hightext {
-    color: #4285f4;
-    font-family: Poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: bolder;
-    line-height: normal;
-  }
-
-  .hoverspan:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-    border-radius: 12px;
-    background-color: white;
-  }
-
-  .specificationdiv {
-    height: auto;
-    width: 80%;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-    margin-top: 20px;
-  }
-
-  .specifications {
-    height: auto;
-    width: 100%;
-    border: 1px solid #f5f9ff;
-    display: flex;
-  }
-
-  .arrowimg {
-    width: 10%;
-    border: 1px solid #f5f9ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-  }
-
-  .spcificationcontent {
-    width: 90%;
-    height: 100%;
-    border: 1px solid #f5f9ff;
-    display: flex;
-    text-align: justify;
-    align-items: center;
-    padding: 5px;
-
-    font-size: 22px;
-    margin-bottom: 3px;
-  }
-
-  .downlodbuttons {
-    width: 80%;
-    height: auto;
-    border: 1px solid #f5f9ff;
-    margin: auto;
-
-    margin-bottom: 20px;
-  }
-
-  .btnimg {
-    height: 100%;
-
-    width: 20%;
-    border: 1px solid #5d8deb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-  }
-
-  .btncontent {
-    height: 100%;
-    width: 80%;
-    border: 1px solid #5d8deb;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    font-size: 25px;
-    border-radius: 12px;
-  }
-
-  .bigbutton {
-    width: 100%;
-    height: 60px;
-    border: 1px solid #f5f9ff;
-    background-color: #5d8deb;
-    color: white;
-    border-radius: 12px;
-    display: flex;
-  }
-
-  .bigbutton:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-  }
-
-  .descriptiondiv {
-    height: auto;
-    width: 98%;
-    border: 1px solid blue;
-    margin: auto;
-    margin-top: 20px;
-  }
-
-  .descbutton {
-    width: 100%;
-    height: 50px;
-    border: 1px solid #f5f9ff;
-    background-color: #0061a7;
-    color: white;
-
-    display: flex;
-  }
-
-  .descbutton:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
-  }
-
-  .contentdescription {
-    width: 100%;
-    height: auto;
-    border: 1px solid #f5f9ff;
-    background-color: white;
-  }
-
-  /* style={{width:"100%",height:"100px",border:"1px solid #2F6FED",backgroundColor:"#5D8DEB",color:"white",borderShadow:"0px 0px 14px -3px #2F6FED",borderRadius:"12px",display:"flex"}} */
-  @media (max-width: 1000px) and (min-width: 501px) {
-    .gridbox {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-    .card {
-      width: 280px;
-    }
-
-    .text {
-      text-align: justify;
-    }
-
-    .imgconteiner {
-      width: 96%;
-    }
-
-    .bannerdiv {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-    .pre {
-      display: none;
-    }
-
-    .btncontent {
-      font-size: 25px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .gridbox {
-      grid-template-columns: repeat(1, 1fr) !important;
-    }
-
-    .card {
-      width: 320px;
-    }
-
-    .text {
-      text-align: justify;
-    }
-
-    .imgconteiner {
-      width: 96%;
-    }
-
-    .bannerdiv {
-      grid-template-columns: repeat(1, 1fr) !important;
-    }
-
-    .pre {
-      display: none;
-    }
-
-    .nxt {
-      display: none;
-    }
-
-    .spcificationcontent {
-      font-size: 20px;
-      margin-bottom: 0px;
-    }
-
-    .btncontent {
-      font-size: 22px;
-    }
-
-    .bigbutton {
-      height: 65px;
-    }
-  }
-`;

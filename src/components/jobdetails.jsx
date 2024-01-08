@@ -1,5 +1,5 @@
 "use client";
-//import "@/style/singlejob.css";
+import "@/style/singlejob.css";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
@@ -9,8 +9,8 @@ import { IconButton } from "@mui/material";
 import { Button, Grid, Typography } from "@mui/material";
 import ScrollDialog from "@/components/Jobform.jsx";
 import baseurl from "@/components/base.js";
-import styled from "styled-components";
-export default function JobDetails({ params }) {
+
+export default function JobDetails({params}) {
   const [singlejob, setsinglejob] = useState({});
   const [jobid, setjobid] = useState(null);
   const [jobdialog, setjobdialog] = useState(true);
@@ -42,7 +42,7 @@ export default function JobDetails({ params }) {
     singledata(+params.singlejob);
   }, []);
   return (
-    <DIV
+    <div
       id="mainContainer"
       style={{ height: "auto", border: "1px solid white" }}
     >
@@ -187,247 +187,6 @@ export default function JobDetails({ params }) {
           <br />
         </div>
       </div>
-    </DIV>
+    </div>
   );
 }
-
-const DIV = styled.div`
-  * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  .bigimgdiv {
-    height: auto;
-    width: 100%;
-    border: 1px solid white;
-    margin-top: 65px;
-  }
-
-  .containerdiv {
-    width: 94%;
-    height: auto;
-    border: 1px solid white;
-    margin: auto;
-    margin-top: 20px;
-  }
-
-  .text {
-    color: #012a4a;
-    font-family: Poppins;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .listdiv {
-    height: auto;
-    width: 100%;
-    border: 1px solid white;
-  }
-
-  .banner {
-    width: 98vw;
-    margin: auto;
-  }
-
-  .card {
-    height: 200px;
-    width: 100%;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    border: 3px solid white;
-  }
-
-  .card:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-  }
-
-  .cardupper {
-    height: 70%;
-    border: 1px solid white;
-    margin: auto;
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-  }
-
-  .cardlower {
-    height: 30%;
-    border: 1px solid white;
-    margin: auto;
-    width: 100%;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px;
-  }
-
-  .upper1 {
-    width: 75%;
-    border: 1px solid white;
-    height: 100%;
-    border-radius: 10px 0px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .upper2 {
-    width: 25%;
-    border: 1px solid white;
-    height: 100%;
-    border-radius: 0px 10px 0px 0px;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .typo {
-    color: black;
-    font-family: Poppins;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-
-  .blue1 {
-    width: 20%;
-    height: 100%;
-    align-items: center;
-    font-size: 16px;
-    padding: 1px;
-    color: var(--4285-f-4, #4285f4);
-  }
-
-  .blue2 {
-    width: 80%;
-    height: 100%;
-    align-items: center;
-    font-size: 16px;
-    padding: 1px;
-    color: var(--4285-f-4, #4285f4);
-  }
-
-  .typocompany {
-    color: #000;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-
-  .desctext {
-    color: #000;
-    font-family: Poppins;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .pricetypo {
-    color: #4285f4;
-    text-align: right;
-    font-family: Poppins;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  .placetypo {
-    color: #000;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .emptypo {
-    color: #000;
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-
-  .remotediv {
-    height: 18px;
-    width: 100%;
-    border: 1px solid white;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    text-align: right !important;
-  }
-
-  @media (max-width: 700px) {
-    .text {
-      font-size: 24px;
-    }
-
-    .card {
-      height: 185px;
-      border: 3px solid white;
-    }
-
-    .blue1 {
-      width: 25%;
-      font-size: 9px;
-    }
-
-    .blue2 {
-      width: 75%;
-      font-size: 9px;
-    }
-
-    .cardupper {
-      padding: 3px;
-    }
-
-    .cardlower {
-      padding: 3px;
-    }
-
-    .typo {
-      font-size: 20px;
-    }
-
-    .pricetypo {
-      font-size: 13px;
-    }
-
-    .typocompany {
-      font-size: 16px;
-    }
-
-    .desctext {
-      font-size: 18px;
-    }
-
-    .placetypo {
-      font-size: 11px;
-    }
-
-    .emptypo {
-      font-size: 12px;
-    }
-
-    .remotediv {
-      font-size: 12px;
-    }
-
-    .bigimgdiv {
-      margin-top: 7px;
-    }
-  }
-`;
